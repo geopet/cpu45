@@ -15,7 +15,7 @@ gem 'jquery-rails'
 
 
 gem 'foreigner'
-gem 'seed-fu'
+gem 'seed-fu', '2.0.1.rails31'
 gem 'validation_reflection'
 gem 'tzinfo'
 gem 'formtastic-rails3', :require => 'formtastic'
