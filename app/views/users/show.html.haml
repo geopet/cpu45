@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Login:
+  = @user.login
+%p
+  %b Email:
+  = @user.email
+%p
+  %b Time zone:
+  = @user.time_zone
+%p
+  %b First name:
+  = @user.first_name
+%p
+  %b Middle initial:
+  = @user.middle_initial
+%p
+  %b Last name:
+  = @user.last_name
+%p
+  %b Birthday:
+  = @user.birthday
+%p
+  %b Sex:
+  = @user.sex
+%p
+  %b Admin:
+  = @user.admin
+
+= link_to 'Edit', edit_user_path(@user)
+\|
+= link_to 'Back', users_path
