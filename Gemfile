@@ -29,13 +29,13 @@ end
 
 group :test, :development do
   gem 'ruby-debug19', :require => 'ruby-debug'
-  gem 'rspec-rails', :require => false
-  gem 'cucumber-rails', :require => false
-  gem 'capybara', :require => false
-  gem 'factory_girl_rails', :require => false
-  gem 'pickle', :require => false
-  gem 'timecop', :require => false
-  gem 'be_valid_asset', :require => false
+  gem 'rspec-rails'
+  gem 'cucumber-rails'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'pickle'
+  gem 'timecop'
+  gem 'be_valid_asset'
 end
 
 group :test do
