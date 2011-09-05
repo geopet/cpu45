@@ -1,7 +1,5 @@
-        Nail down the versions of all the gems we're using so people
-        playing the game at home won't be surprised
-
         Document what is necessary to get the database working (or
         perhaps create a script)
 
-        Actually add something useful!
+        Set up devise
+
