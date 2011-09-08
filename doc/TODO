@@ -1,3 +1,15 @@
+        Add non-null constraints to the user migration
+
+        Add validations to the user model
+
+        Move some of the current user stuff into admin
+
+        Fix the birthday label
+
+        Make the time-zone be a pull-down
+
+        use formtastic for the forms
+
         Document what is necessary to get the database working (or
         perhaps create a script)
 

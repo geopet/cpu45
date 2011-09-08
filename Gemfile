@@ -13,7 +13,6 @@ end
 
 gem 'jquery-rails'
 
-
 gem 'foreigner'
 gem 'seed-fu', '2.0.1.rails31'
 gem 'validation_reflection'
