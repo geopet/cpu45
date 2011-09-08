@@ -3,3 +3,6 @@
 
         Set up devise
 
+        How about using asset pipeline
+        <http://railscasts.com/episodes/282-upgrading-to-rails-3-1>
+        but that would require moving from static to dynamic content

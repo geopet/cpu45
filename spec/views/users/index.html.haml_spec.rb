@@ -27,7 +27,7 @@ describe "users/index.html.haml" do
   end
 
   it "renders a list of users" do
-    render
+    render :template => 'users/index', :layout => 'layouts/application'
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "tr>td", :text => "Login".to_s, :count => 2
     # Run the generator again with the --webrat flag if you want to use webrat matchers
@@ -44,5 +44,7 @@ describe "users/index.html.haml" do
     assert_select "tr>td", :text => "Sex".to_s, :count => 2
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "tr>td", :text => false.to_s, :count => 2
+
+    rendered.should be_valid_xhtml
   end
 end
