@@ -24,12 +24,27 @@ describe UsersController do
   # User. As you add validations to User, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {
+      login: 'ctm',
+      email: 'ctm@devctm.com',
+      time_zone: 'Mountain Time (US & Canada)',
+      first_name: 'Cliff',
+      last_name: 'Matthews'
+    }
+  end
+
+  def a_user_with_valid_attributes
+    User.new.tap do |user|
+      valid_attributes.each_pair do |attr, value|
+        user.send "#{attr}=", value
+      end
+      user.save!
+    end
   end
 
   describe "GET index" do
     it "assigns all users as @users" do
-      user = User.create! valid_attributes
+      user = a_user_with_valid_attributes
       get :index
       assigns(:users).should eq([user])
     end
@@ -37,7 +52,7 @@ describe UsersController do
 
   describe "GET show" do
     it "assigns the requested user as @user" do
-      user = User.create! valid_attributes
+      user = a_user_with_valid_attributes
       get :show, :id => user.id.to_s
       assigns(:user).should eq(user)
     end
@@ -52,7 +67,7 @@ describe UsersController do
 
   describe "GET edit" do
     it "assigns the requested user as @user" do
-      user = User.create! valid_attributes
+      user = a_user_with_valid_attributes
       get :edit, :id => user.id.to_s
       assigns(:user).should eq(user)
     end
@@ -98,7 +113,7 @@ describe UsersController do
   describe "PUT update" do
     describe "with valid params" do
       it "updates the requested user" do
-        user = User.create! valid_attributes
+        user = a_user_with_valid_attributes
         # Assuming there are no other users in the database, this
         # specifies that the User created on the previous line
         # receives the :update_attributes message with whatever params are
@@ -108,13 +123,13 @@ describe UsersController do
       end
 
       it "assigns the requested user as @user" do
-        user = User.create! valid_attributes
+        user = a_user_with_valid_attributes
         put :update, :id => user.id, :user => valid_attributes
         assigns(:user).should eq(user)
       end
 
       it "redirects to the user" do
-        user = User.create! valid_attributes
+        user = a_user_with_valid_attributes
         put :update, :id => user.id, :user => valid_attributes
         response.should redirect_to(user)
       end
@@ -122,7 +137,7 @@ describe UsersController do
 
     describe "with invalid params" do
       it "assigns the user as @user" do
-        user = User.create! valid_attributes
+        user = a_user_with_valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         User.any_instance.stub(:save).and_return(false)
         put :update, :id => user.id.to_s, :user => {}
@@ -130,7 +145,7 @@ describe UsersController do
       end
 
       it "re-renders the 'edit' template" do
-        user = User.create! valid_attributes
+        user = a_user_with_valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         User.any_instance.stub(:save).and_return(false)
         put :update, :id => user.id.to_s, :user => {}
@@ -141,14 +156,14 @@ describe UsersController do
 
   describe "DELETE destroy" do
     it "destroys the requested user" do
-      user = User.create! valid_attributes
+      user = a_user_with_valid_attributes
       expect {
         delete :destroy, :id => user.id.to_s
       }.to change(User, :count).by(-1)
     end
 
     it "redirects to the users list" do
-      user = User.create! valid_attributes
+      user = a_user_with_valid_attributes
       delete :destroy, :id => user.id.to_s
       response.should redirect_to(users_url)
     end

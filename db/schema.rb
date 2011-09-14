@@ -14,17 +14,19 @@
 ActiveRecord::Schema.define(:version => 20110905192916) do
 
   create_table "users", :force => true do |t|
-    t.string   "login"
-    t.string   "email"
-    t.string   "time_zone"
-    t.string   "first_name"
+    t.string   "login",          :null => false
+    t.string   "email",          :null => false
+    t.string   "time_zone",      :null => false
+    t.string   "first_name",     :null => false
     t.string   "middle_initial"
-    t.string   "last_name"
+    t.string   "last_name",      :null => false
     t.date     "birthday"
     t.string   "sex"
     t.boolean  "admin"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "users", ["login"], :name => "index_users_on_login", :unique => true
 
 end
