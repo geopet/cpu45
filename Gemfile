@@ -24,6 +24,8 @@ gem 'devise'
 
 group :development do
   gem 'capistrano', :require => false
+  gem 'autotest-fsevent' # TODO: make this Mac-specific
+  gem 'autotest-growl' # TODO: make this Mac-specific
 end
 
 group :test, :development do
@@ -43,4 +45,5 @@ group :test do
   gem 'cover_me', '>= 1.0.0.rc6'
   gem 'database_cleaner'
   gem 'sqlite3'
+  gem 'autotest'
 end
