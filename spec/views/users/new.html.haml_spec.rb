@@ -29,6 +29,6 @@ describe "users/new.html.haml" do
       assert_select "input#user_admin", :name => "user[admin]"
     end
 
-    rendered.should be_valid_xhtml
+    rendered.should be_valid_html
   end
 end
