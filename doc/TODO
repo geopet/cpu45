@@ -1,16 +1,5 @@
-DONE    Add non-null constraints to the user migration
-
-        Fix errors!
-
         Make it so that autotest-fsevent and autotest-growl aren't needed
         where they don't exist
-
-        Add validations to the user model
-
-                use new syntax
-
-        attr_accessible for everyone -- can I do it at the base level and
-        have it inherited?
 
         Move some of the current user stuff into admin
 
