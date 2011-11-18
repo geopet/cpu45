@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
-gem 'pg', '0.11.0'
+gem 'rails', '~> 3.1.0'
+gem 'pg', '~> 0.11.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -42,7 +42,7 @@ end
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
-  gem 'cover_me', '>= 1.0.0.rc6'
+  gem 'cover_me', '~> 1.2.0'
   gem 'database_cleaner'
   gem 'sqlite3'
   gem 'autotest'
