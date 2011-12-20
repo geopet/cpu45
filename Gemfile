@@ -1,14 +1,14 @@
 source 'http://rubygems.org'
 
 gem 'rails', '~> 3.1.0'
-gem 'pg', '~> 0.11.0'
+gem 'pg', '~> 0.12.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', '~> 3.1.0'
-  gem 'coffee-rails', '~> 3.1.0'
-  gem 'uglifier'
+  gem 'sass-rails', '~> 3.1.5'
+  gem 'coffee-rails', '~> 3.1.1'
+  gem 'uglifier', '>= 1.0.3'
 end
 
 gem 'jquery-rails'
@@ -29,7 +29,11 @@ group :development do
 end
 
 group :test, :development do
-  gem 'ruby-debug19', :require => 'ruby-debug'
+# Right now ruby-debug19 doesn't work with ruby 1.9.3-p0.
+# See <http://blog.wyeworks.com/2011/11/1/ruby-1-9-3-and-ruby-debug> for
+# more info.
+
+#  gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'rspec-rails'
   gem 'cucumber-rails'
   gem 'capybara'
@@ -41,7 +45,7 @@ end
 
 group :test do
   # Pretty printed test output
-  gem 'turn', :require => false
+  gem 'turn', '0.8.2', :require => false
   gem 'cover_me', '~> 1.2.0'
   gem 'database_cleaner'
   gem 'sqlite3'
