@@ -33,6 +33,12 @@ describe UsersController do
     }
   end
 
+  def updatable_attributes
+    {
+      time_zone: 'Central Time (US & Canada)'
+    }
+  end
+
   def a_user_with_valid_attributes
     User.new.tap do |user|
       valid_attributes.each_pair do |attr, value|
@@ -124,13 +130,13 @@ describe UsersController do
 
       it "assigns the requested user as @user" do
         user = a_user_with_valid_attributes
-        put :update, :id => user.id, :user => valid_attributes
+        put :update, :id => user.id, :user => updatable_attributes
         assigns(:user).should eq(user)
       end
 
       it "redirects to the user" do
         user = a_user_with_valid_attributes
-        put :update, :id => user.id, :user => valid_attributes
+        put :update, :id => user.id, :user => updatable_attributes
         response.should redirect_to(user)
       end
     end

@@ -40,19 +40,14 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(params[:user])
-
     # NOTE: this code will eventually go into admin, since we don't want
     #       non-admin users creating new users.  However, for now it's OK
     #       to do it here.
 
-    # These are all protected attributes.  Yes, we could use a loop, but
-    # again, this is all being moved later.
-
-    @user.login = params[:user][:login]
-    @user.email = params[:user][:email]
-    @user.first_name = params[:user][:first_name]
-    @user.last_name = params[:user][:last_name]
+    update_protected_attrs_from_params(:user, :login, :email,
+                                                :first_name, :last_name) do |p|
+      @user = User.new(p)
+    end
 
     respond_to do |format|
       if @user.save

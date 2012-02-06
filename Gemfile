@@ -1,20 +1,20 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~> 3.1.0'
+gem 'rails', '~> 3.2.1'
 gem 'pg', '~> 0.12.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', '~> 3.1.5'
-  gem 'coffee-rails', '~> 3.1.1'
+  gem 'sass-rails', '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
 
 gem 'jquery-rails'
 
 gem 'foreigner'
-gem 'seed-fu', '2.0.1.rails31'
+# seed-fu currently doesn't work with Rails 3.2.1 gem 'seed-fu'
 gem 'validation_reflection'
 gem 'tzinfo'
 gem 'formtastic-rails3', :require => 'formtastic'
@@ -45,7 +45,7 @@ end
 
 group :test do
   # Pretty printed test output
-  gem 'turn', '0.8.2', :require => false
+  gem 'turn', :require => false
   gem 'cover_me', '~> 1.2.0'
   gem 'database_cleaner'
   gem 'sqlite3'
