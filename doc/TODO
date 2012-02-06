@@ -1,3 +1,10 @@
+        convert our static HTML to HAML
+
+        share the navigation instead of having it replicated (it's already
+        diverged!)
+
+========================================================================
+
         Make it so that autotest-fsevent and autotest-growl aren't needed
         where they don't exist
 
