@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(:version => 20110928003817) do
     t.date     "birthday"
     t.string   "sex"
     t.boolean  "admin"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                            :null => false
+    t.datetime "updated_at",                                            :null => false
     t.string   "email",                                 :default => "", :null => false
     t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
     t.string   "reset_password_token"
