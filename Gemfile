@@ -33,21 +33,20 @@ group :test, :development do
 # See <http://blog.wyeworks.com/2011/11/1/ruby-1-9-3-and-ruby-debug> for
 # more info.
 
-#  gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'debugger'
   gem 'rspec-rails'
-  gem 'cucumber-rails'
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'pickle'
-  gem 'timecop'
-  gem 'be_valid_asset'
 end
 
 group :test do
-  # Pretty printed test output
+  gem 'cucumber-rails', :require => false
   gem 'turn', :require => false
   gem 'cover_me', '~> 1.2.0'
   gem 'database_cleaner'
   gem 'sqlite3'
   gem 'autotest'
+  gem 'timecop'
+  gem 'be_valid_asset'
 end

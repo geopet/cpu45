@@ -1,3 +1,13 @@
+require 'bundler/capistrano'
+
+set :default_environment, {
+  'PATH' => "/home/ctm/.rvm/gems/ruby-1.9.3-p125/bin:/home/ctm/.rvm/bin:/home/ctm/.rvm/rubies/ruby-1.9.3-p125/bin:$PATH",
+  'RUBY_VERSION' => 'ruby 1.8.7',
+  'GEM_HOME'     => '/home/ctm/.rvm/gems/ruby-1.9.3-p125',
+  'GEM_PATH'     => '/home/ctm/.rvm/gems/ruby-1.9.3-p125',
+  'BUNDLE_PATH'  => '/home/ctm/.rvm/gems/ruby-1.9.3-p125'
+}
+
 default_run_options[:pty] = true
 
 set :application, "cpu45"
