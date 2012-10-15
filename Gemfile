@@ -33,7 +33,7 @@ group :test, :development do
 # See <http://blog.wyeworks.com/2011/11/1/ruby-1-9-3-and-ruby-debug> for
 # more info.
 
-  gem 'debugger'
+#  gem 'debugger'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'factory_girl_rails'
