@@ -15,7 +15,7 @@ describe "admin/users/new.html.haml" do
   end
 
   it "renders new user form" do
-    render :template => 'admin/users/new', :layout => 'layouts/application'
+    render :template => 'admin/users/new', :layout => 'layouts/admin'
 
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "form", :action => admin_users_path, :method => "post" do

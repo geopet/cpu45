@@ -1,4 +1,16 @@
 Cpu45::Application.routes.draw do
+  get "info/overview"
+
+  get "info/aid_stations"
+
+  get "info/course_description"
+
+  get "info/directions"
+
+  get "info/rules"
+
+  get "info/schedule"
+
   devise_for :users
 
   namespace :admin do

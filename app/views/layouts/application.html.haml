@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+%html
+  %head
+    %title Cedro Peak Ultra 45M
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body
+    #header
+      %a{href: 'index.html'}
+        %img{width: 208, height: 208, alt: 'CPU45 45 rpm record logo', src: '/images/cpu_logo.gif'}
+      #outer-wrapper
+        %h1 Cedro Peak Ultramarathon 45
+        .wrapper
+          %div
+            %h2
+              April 13th, 2013
+              %span &bull;
+              Tijeras, NM
+              %span &bull;
+              45 miles of trail
+        %ul
+          %li
+            Contact:
+            %a{href: 'mailto:kingyogadesign@gmail.com'} Kim King
+    #main-page
+      = render :partial => 'nav'
+      #main-content
+        .wrapper
+          %div
+            = yield
+    #footer

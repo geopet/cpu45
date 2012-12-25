@@ -15,7 +15,7 @@ describe "admin/users/edit.html.haml" do
   end
 
   it "renders the edit user form" do
-    render :template => 'admin/users/edit', :layout => 'layouts/application'
+    render :template => 'admin/users/edit', :layout => 'layouts/admin'
 
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "form", :action => admin_users_path(@user), :method => "post" do

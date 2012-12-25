@@ -1,7 +1,6 @@
-        convert our static HTML to HAML
+        figure out how to get the acute e in Elegante (done in utf-8)
 
-        share the navigation instead of having it replicated (it's already
-        diverged!)
+        take /info out of routes
 
 ========================================================================
 
