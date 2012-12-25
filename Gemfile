@@ -1,5 +1,12 @@
 source 'http://rubygems.org'
 
+# We don't use nokogiri directly, but capybara will pull it in
+# and it needs to be above pg to prevent this warning:
+# WARNING: Nokogiri was built against LibXML version 2.8.0, but has dynamically loaded 2.7.8
+# See <https://github.com/sparklemotion/nokogiri/issues/742> for more info.
+
+gem 'nokogiri' 
+
 gem 'rails', '~> 3.2.1'
 gem 'pg', '~> 0.13.2'
 
@@ -14,8 +21,7 @@ end
 gem 'jquery-rails'
 
 gem 'foreigner'
-# seed-fu currently doesn't work with Rails 3.2.1 gem 'seed-fu'
-gem 'validation_reflection'
+gem 'seed-fu'
 gem 'tzinfo'
 gem 'formtastic-rails3', :require => 'formtastic'
 gem 'haml-rails'
@@ -29,11 +35,7 @@ group :development do
 end
 
 group :test, :development do
-# Right now ruby-debug19 doesn't work with ruby 1.9.3-p0.
-# See <http://blog.wyeworks.com/2011/11/1/ruby-1-9-3-and-ruby-debug> for
-# more info.
-
-#  gem 'debugger'
+  gem 'debugger'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'factory_girl_rails'
