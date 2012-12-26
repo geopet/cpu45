@@ -1,8 +1,4 @@
-        make it so capistrano pre compiles assets
-
-                probably then want to turn off auto compiling
-
-        make it so the images we use via css are cached
+TEST    make it so the images we use via css are cached
 
                 should I switch to scss
 

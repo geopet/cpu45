@@ -53,14 +53,14 @@ background-color: #1f7ed4;
         width: 940px;
         margin: 0 auto -1px 10px;
         padding: 12px 0 0;
-        background-image: url(../images/h2_box_top.gif);
+        background-image: image-url("h2_box_top.gif");
         background-repeat: no-repeat;
 }
 
 #header div.wrapper div {
         margin: -1px 0 0;
         padding: 0 0 12px;
-        background-image: url(../images/h2_box_bottom.gif);
+        background-image: image-url("h2_box_bottom.gif");
         background-repeat: no-repeat;
         background-position: bottom;
 }
@@ -83,7 +83,7 @@ h2 {
         font-size: 98%;
         margin: -1px 0;
         padding: 0 40px 0;
-        background-image: url(../images/h2_box_middle.gif);
+        background-image: image-url("h2_box_middle.gif");
         background-repeat: repeat-y;
         background-color: #fff;
 }
@@ -135,14 +135,14 @@ h2 span {
         display: inline;
         margin-top: 37px;
         padding: 12px 0 0;
-        background-image: url(../images/text_box_top.gif);
+        background-image: image-url("text_box_top.gif");
         background-repeat: no-repeat;
 }
 
 #main-content div.wrapper {
                 margin: 0;
         padding: 0 0 12px;
-        background-image: url(../images/text_box_bottom.gif);
+        background-image: image-url("text_box_bottom.gif");
         background-repeat: no-repeat;
         background-position: bottom;
 }
@@ -150,7 +150,7 @@ h2 span {
 #main-content div.wrapper div {
         margin: -1px 0;
         padding: 42px 40px 20px;
-        background-image: url(../images/text_box_middle.gif);
+        background-image: image-url("text_box_middle.gif");
         background-repeat: repeat-y;
         background-color: #fff;
 }
