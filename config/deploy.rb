@@ -32,6 +32,6 @@ end
 
 # database.yml is never in the source repository, but the one from the
 # previous release should still be current.
-after 'deploy:update_code' do
+before 'deploy:assets:precompile' do
   run "cp -p \"#{current_path}/config/database.yml\" \"#{release_path}/config/\""
 end
