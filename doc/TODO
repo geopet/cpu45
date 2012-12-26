@@ -1,4 +1,13 @@
-        make it so we can deploy and use this version on cpu45.org
+        make it so capistrano pre compiles assets
+
+                probably then want to turn off auto compiling
+
+        make it so the images we use via css are cached
+
+                should I switch to scss
+
+        consider removing the javascript stuff for now (no need to make
+        end users download libraries they don't use)
 
         seed data for myself, kim and Jim?
 
