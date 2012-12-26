@@ -1,6 +1,12 @@
-        figure out how to get the acute e in Elegante (done in utf-8)
+        make it so we can deploy and use this version on cpu45.org
 
-        take /info out of routes
+        seed data for myself, kim and Jim?
+
+        email address via seed data?
+
+                email, for registering new accounts
+
+        CanCan for runners, volunteers, race directors, etc.
 
 ========================================================================
 
@@ -23,11 +29,6 @@
         Document what is necessary to get the database working (or
         perhaps create a script)
 
-        How about using asset pipeline
-        <http://railscasts.com/episodes/282-upgrading-to-rails-3-1>
-        but that would require moving from static to dynamic content
-
-
 ========================================================================
 
         Finish setting up devise:
@@ -42,20 +43,10 @@ Some setup you must do manually if you haven't yet:
 
      In production, :host should be set to the actual host of your application.
 
-  2. Ensure you have defined root_url to *something* in your config/routes.rb.
-     For example:
-
-       root :to => "home#index"
+  2. DONE
 
   3. Ensure you have flash messages in app/views/layouts/application.html.erb.
      For example:
 
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
-
-  4. If you are deploying Rails 3.1 on Heroku, you may want to set:
-
-       config.assets.initialize_on_precompile = false
-
-     On config/application.rb forcing your application to not access the DB
-     or load models when precompiling your assets.

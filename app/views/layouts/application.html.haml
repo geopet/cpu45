@@ -7,8 +7,8 @@
     = csrf_meta_tags
   %body
     #header
-      %a{href: 'index.html'}
-        %img{width: 208, height: 208, alt: 'CPU45 45 rpm record logo', src: '/images/cpu_logo.gif'}
+      %a{href: root_path}
+        = image_tag('cpu_logo.gif', width: 208, height: 208, alt: 'CPU45 45 rpm record logo')
       #outer-wrapper
         %h1 Cedro Peak Ultramarathon 45
         .wrapper
