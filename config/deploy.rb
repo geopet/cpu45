@@ -1,11 +1,8 @@
 require 'bundler/capistrano'
 
-set :default_environment, {
-  'PATH' => "/home/cpu45/.rvm/gems/ruby-1.9.3-p286/bin:/home/cpu45/.rvm/gems/ruby-1.9.3-p286@global/bin:/home/cpu45/.rvm/rubies/ruby-1.9.3-p286/bin:/home/cpu45/.rvm/bin:$PATH",
-  'RUBY_VERSION' => 'ruby 1.9.3-p286',
-  'GEM_HOME'     => '/home/cpu45/.rvm/gems/ruby-1.9.3-p286',
-  'GEM_PATH'     => '/home/cpu45/.rvm/gems/ruby-1.9.3-p286:/home/cpu45/.rvm/gems/ruby-1.9.3-p286@global'
-}
+set :rvm_ruby_string, 'ruby-1.9.3-p327'
+
+require 'rvm/capistrano'
 
 default_run_options[:pty] = true
 
