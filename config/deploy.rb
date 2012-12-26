@@ -29,3 +29,9 @@ namespace :deploy do
     run "touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 end
+
+# database.yml is never in the source repository, but the one from the
+# previous release should still be current.
+after 'deploy:update_code' do
+  run "cp -p \"#{current_path}/config/database.yml\" \"#{release_path}/config/\""
+end
