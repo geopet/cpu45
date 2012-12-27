@@ -1,4 +1,4 @@
-source 'http://rubygems.org'
+source :rubygems
 
 # We don't use nokogiri directly, but capybara will pull it in
 # and it needs to be above pg to prevent this warning:
@@ -40,8 +40,7 @@ group :development do
 end
 
 group :test, :development do
-# We'll have to wait a little before we can bring debugger back
-#  gem 'debugger'
+  gem 'debugger'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'factory_girl_rails'

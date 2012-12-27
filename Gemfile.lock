@@ -63,6 +63,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
+    columnize (0.3.6)
     configatron (2.9.1)
       yamler (>= 0.1.0)
     cover_me (1.2.0)
@@ -78,6 +79,13 @@ GEM
       cucumber (>= 1.1.8)
       nokogiri (>= 1.5.0)
     database_cleaner (0.9.1)
+    debugger (1.2.2)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.1.1)
+      debugger-ruby_core_source (~> 1.1.5)
+    debugger-linecache (1.1.2)
+      debugger-ruby_core_source (>= 1.1.1)
+    debugger-ruby_core_source (1.1.5)
     devise (2.1.2)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -240,6 +248,7 @@ DEPENDENCIES
   cover_me (~> 1.2.0)
   cucumber-rails
   database_cleaner
+  debugger
   devise
   factory_girl_rails
   foreigner
