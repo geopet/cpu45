@@ -103,9 +103,8 @@ GEM
     ffi (1.2.0)
     foreigner (1.2.1)
       activerecord (>= 3.0.0)
-    formtastic-rails3 (0.9.10.1)
-      actionpack (>= 3.0.0beta3)
-      activesupport (>= 3.0.0beta3)
+    formtastic (2.1.1)
+      actionpack (~> 3.0)
     gherkin (2.11.5)
       json (>= 1.4.6)
     haml (3.1.7)
@@ -252,7 +251,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   foreigner
-  formtastic-rails3
+  formtastic
   haml-rails
   jquery-rails
   libv8

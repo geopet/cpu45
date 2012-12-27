@@ -1,6 +1,6 @@
 require 'bundler/capistrano'
 
-set :rvm_ruby_string, 'ruby-1.9.3-p327'
+set :rvm_ruby_string, 'ruby-1.9.3-p362'
 
 require 'rvm/capistrano'
 
@@ -20,7 +20,7 @@ role :db,  'cpu45.org', :primary => true
 ssh_options[:forward_agent] = true
 set :branch, 'master'
 set :deploy_via, :remote_cache
-set :git_enable_submodules, 1
+# set :git_enable_submodules, 1
 
 namespace :deploy do
   task :start do ; end
