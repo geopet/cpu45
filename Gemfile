@@ -40,7 +40,8 @@ group :development do
 end
 
 group :test, :development do
-  gem 'debugger'
+# Can't consistently install debugger just yet
+#  gem 'debugger'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'factory_girl_rails'
