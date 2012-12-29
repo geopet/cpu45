@@ -44,16 +44,16 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'factory_girl_rails'
+  gem 'webrat'
   gem 'pickle'
 end
 
 group :test do
   gem 'cucumber-rails', :require => false
-  gem 'turn', :require => false
   gem 'cover_me', '~> 1.2.0'
   gem 'database_cleaner'
   gem 'sqlite3'
-  gem 'autotest'
+  gem 'autotest-rails'
   gem 'timecop'
   gem 'be_valid_asset'
 end
