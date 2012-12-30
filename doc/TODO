@@ -1,6 +1,3 @@
-        consider making it so www.cpu45.org gets permanently redirected
-        to cpu45.org (bing indexes www.cpu45.org), same with cpu45.com
-
         consider removing the javascript stuff for now (no need to make
         end users download libraries they don't use)
 
