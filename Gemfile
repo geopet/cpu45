@@ -9,7 +9,7 @@ source :rubygems
 gem 'nokogiri' 
 
 gem 'rails', '~> 3.2.1'
-gem 'pg', '~> 0.13.2'
+gem 'pg'
 
 gem 'libv8'
 gem 'therubyracer'
