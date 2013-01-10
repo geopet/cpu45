@@ -11,7 +11,7 @@ gem 'nokogiri'
 gem 'rails', '~> 3.2.1'
 gem 'pg'
 
-gem 'libv8'
+gem 'libv8', '~> 3.11.8'
 gem 'therubyracer'
 
 # Gems used only for assets and not required
