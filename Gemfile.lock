@@ -259,7 +259,7 @@ DEPENDENCIES
   nokogiri
   pg
   pickle
-  rails (~> 3.2.1)
+  rails (~> 3.2.11)
   rspec-rails
   rvm-capistrano
   sass-rails (~> 3.2.3)

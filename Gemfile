@@ -8,7 +8,11 @@ source :rubygems
 
 gem 'nokogiri' 
 
-gem 'rails', '~> 3.2.1'
+# All 3.2.x versions of rails prior to 3.2.11 have a trivially exploitable
+# vulnerability.
+
+gem 'rails', '~> 3.2.11'
+
 gem 'pg'
 
 gem 'therubyracer', :require => 'v8'
