@@ -19,7 +19,7 @@ development:
   host: localhost
 ```
 
-Next run `$ rake db:create` and then `$ rake db:migrate`. Running `rails server`
+Next run `$ rake db:create` and then `$ rake db:setup`. Running `rails server`
 should startup without a problem.
 
 ## Webrick
