@@ -44,7 +44,7 @@ end
 
 group :test, :development do
   gem 'debugger'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 2.4'
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'webrat'

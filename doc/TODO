@@ -1,3 +1,20 @@
+        Let everyone know that RubiABQ meeting will be @ SWCP on Wednesday
+
+        https://github.com/organizations/new
+
+        Write up explanation of how to get PostgreSQL working (including
+        user creation, password assignment) as well as how to use sqlite3
+        for development.
+
+localtunnel: http://progrium.com/localtunnel/
+
+twitter bootstrap: http://twitter.github.com/bootstrap/ 
+
+Here's a RailsCast on it: http://railscasts.com/episodes/
+328-twitter-bootstrap-basics and Michael Hartl's Rails Tutorial (http://
+ruby.railstutorial.org/ruby-on-rails-tutorial-book) goes into some depth on
+how to add it to your Rails app as well.
+
         consider removing the javascript stuff for now (no need to make
         end users download libraries they don't use)
 
