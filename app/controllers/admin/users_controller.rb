@@ -46,10 +46,7 @@ class Admin::UsersController < ApplicationController
     #       non-admin users creating new users.  However, for now it's OK
     #       to do it here.
 
-    update_protected_attrs_from_params(:user, :login, :email,
-                                                :first_name, :last_name) do |p|
-      @user = User.new(p)
-    end
+    @user = User.new(params[:user], as: :admin)
 
     respond_to do |format|
       if @user.save
